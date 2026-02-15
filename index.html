@@ -3,8 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Stick Fight Game</title>
+    <title>My Game</title>
     <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+        }
         canvas {
             border: 1px solid black;
         }
@@ -15,20 +23,14 @@
     <script>
         const canvas = document.getElementById('gameCanvas');
         const ctx = canvas.getContext('2d');
-
-        function draw() {
-            ctx.clearRect(0, 0, canvas.width, canvas.height);
-            // Game rendering logic goes here
-            ctx.fillStyle = 'blue';
-            ctx.fillRect(50, 50, 100, 100); // Placeholder for player
-        }
-
+        // Game setup
         function gameLoop() {
-            draw();
+            // Clear the canvas
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            // Game drawing code goes here
             requestAnimationFrame(gameLoop);
         }
-
-        gameLoop(); // Start the game loop
+        gameLoop();
     </script>
 </body>
 </html>
